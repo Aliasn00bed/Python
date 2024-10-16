@@ -1,0 +1,21 @@
+def merge(dict1, dict2):
+    score_dict = {}
+    
+#score_dict = dict1 | dict2  this works for python 3.9 and later.  The code below is for other versions and more explicit.
+
+    for key in dict1:
+        score_dict[key] = dict1[key]
+    #iterates the key and assigns
+    for key in dict2:
+        score_dict[key] = dict2[key]
+    return score_dict
+    
+def total_score(score_dict):
+    scoring = 0 
+    vals = score_dict.values()
+# this pulls the value pairs from the score_dict
+    for value in vals:
+        scoring += value
+# iterates over the value pairs and adds them to the score requirement.  
+    return scoring
+    pass
