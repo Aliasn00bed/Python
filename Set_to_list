@@ -1,0 +1,13 @@
+#spells is list input with duplicates.  
+
+def remove_duplicates(spells):
+    spell_list = set(spells)
+#the above creates a set of spells from the input.
+    for spell in spell_list:
+        if spell not in spell_list:
+            spell_list.add(spells)
+#the above says for each spell in the spell_list iterate, and if the spell is not in spell_list then append it.
+
+    return list(spell_list)
+#the set must then be transformed into a list so in the return we do so.        
+
